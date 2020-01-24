@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
-//styled components
-const MemberInput = styled.form`
+const TeamInfo = styled.form`
 display:flex;
 flex-direction:column;
 width: 300px;
@@ -19,8 +18,7 @@ background: black;
 color: green;
 `;
 
-
-const MemberForm = props => {
+const TeamForm = props => {
     const [member, setMember] = useState({name: '', email: '', role: ''})
 
     const handleChanges = event => {
@@ -34,7 +32,7 @@ const MemberForm = props => {
     }
     return(
         <FormContainer>
-            <MemberInput className = 'member-form' onSubmit={submitForm}>
+            <TeamInfo className = 'member-form' onSubmit={submitForm}>
                 <label htmlFor='name'>Name: </label>
                 <input id='name' type='text' name='name' value={member.name} onChange={handleChanges}/>
                 <label htmlFor='email'>Email: </label>
@@ -48,9 +46,9 @@ const MemberForm = props => {
                     <option value='Kitten Trainer'>Kitten Trainer</option>
                 </select>
                 <button type='submit'>Add Member</button>
-            </MemberInput>
+            </TeamInfo>
         </FormContainer>
     )
 }
 
-export default MemberForm;
+export default TeamForm;

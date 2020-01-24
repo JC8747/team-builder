@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Members from './Components/Members';
-import MemberForm from './Components/MemberForm';
+import TeamData from './Components/TeamData';
+import TeamForm from './Components/TeamForm';
 
 function App() {
   const [team, setTeam] = useState([
@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App">
      <h1 className = 'header'>My Team</h1>
-     <MemberForm addNewMember={addNewMember}/>
-     <Members team={team}/>
+     <TeamForm addNewMember={addNewMember}/>
+     <TeamData team={team}/>
     </div>
   );
 }
